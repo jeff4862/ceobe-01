@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        height: 100vh;
+      }
+      .past,
+      .future {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2em;
+        color: white;
+        transition: background-color 0.5s;
+      }
+      .past {
+        background-color: #555;
+      }
+      .future {
+        background-color: #333;
+      }
+      .boundary {
+        width: 2px;
+        background-color: white;
+        height: 100%;
+      }
+      .past:hover {
+        background-color: #777;
+      }
+      .future:hover {
+        background-color: #444;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const past = document.querySelector(".past");
+        const future = document.querySelector(".future");
+        const boundary = document.querySelector(".boundary");
+
+        past.addEventListener("click", function () {
+          alert("过去已不存在");
+        });
+
+        future.addEventListener("click", function () {
+          alert("未来还不存在");
+        });
+
+        boundary.addEventListener("click", function () {
+          alert("既没有未来、过去，也没有现在，所以时间也不存在");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="past">过去</div>
+    <div class="boundary"></div>
+    <div class="future">未来</div>
+  </body>
+</html>
